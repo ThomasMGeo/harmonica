@@ -207,7 +207,7 @@ to use them on a small example.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 5.885 seconds)
+   **Total running time of the script:** (0 minutes 6.235 seconds)
 
 
 .. _sphx_glr_download_gallery_equivalent_sources_gradient_boosted.py:

@@ -515,7 +515,7 @@ document.write(`
 <dt class="sig sig-object py" id="harmonica.filters.reduction_to_pole_kernel">
 <span class="sig-prename descclassname"><span class="pre">harmonica.filters.</span></span><span class="sig-name descname"><span class="pre">reduction_to_pole_kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fft_grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inclination</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">declination</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnetization_inclination</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnetization_declination</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/harmonica/filters/_filters.html#reduction_to_pole_kernel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#harmonica.filters.reduction_to_pole_kernel" title="Link to this definition">#</a></dt>
 <dd><p>Filter for reduction to the pole in frequency domain</p>
-<p>Return a <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v2024.7.1.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a> with the values of the frequency domain
+<p>Return a <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v2024.9.1.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a> with the values of the frequency domain
 filter for applying a reduction to the pole on magnetic data. The filter
 is built upon the frequency coordinates of the passed <code class="docutils literal notranslate"><span class="pre">fft_grid</span></code> and is
 defined as follows:</p>
@@ -551,22 +551,22 @@ respectively) and for the magnetization vector (<span class="math notranslate no
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>fft_grid</strong><span class="classifier"><a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v2024.7.1.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a></span></dt><dd><p>Array with the Fourier transform of the original grid.
+<dt><strong>fft_grid</strong><span class="classifier"><a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v2024.9.1.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a></span></dt><dd><p>Array with the Fourier transform of the original grid.
 Its dimensions should be in the following order:
 <em>freq_northing</em>, <em>freq_easting</em>.
 Use <a class="reference external" href="https://xrft.readthedocs.io/en/stable/api.html#xrft.xrft.fft" title="(in xrft v0.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">xrft.xrft.fft</span></code></a> and <a class="reference external" href="https://xrft.readthedocs.io/en/stable/api.html#xrft.xrft.ifft" title="(in xrft v0.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">xrft.xrft.ifft</span></code></a> functions to
 compute the Fourier Transform and its inverse, respectively.</p>
 </dd>
-<dt><strong>inclination</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">degrees</span></code></span></dt><dd><p>The inclination of the inducing Geomagnetic field.</p>
+<dt><strong>inclination</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">degrees</span></code></span></dt><dd><p>The inclination of the inducing Geomagnetic field.</p>
 </dd>
-<dt><strong>declination</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">degrees</span></code></span></dt><dd><p>The declination of the inducing Geomagnetic field.</p>
+<dt><strong>declination</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">degrees</span></code></span></dt><dd><p>The declination of the inducing Geomagnetic field.</p>
 </dd>
-<dt><strong>magnetization_inclination</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">degrees</span></code> or <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>The inclination of the total magnetization of the anomaly source. If
+<dt><strong>magnetization_inclination</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">degrees</span></code> or <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>The inclination of the total magnetization of the anomaly source. If
 None, the <code class="docutils literal notranslate"><span class="pre">magnetization_inclination</span></code> will be set equal to the
 <code class="docutils literal notranslate"><span class="pre">inclination</span></code>, neglecting remanent magnetization and self
 demagnetization. Default None.</p>
 </dd>
-<dt><strong>magnetization_declination</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">degrees</span></code></span></dt><dd><p>The declination of the total magnetization of the anomaly source. If
+<dt><strong>magnetization_declination</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">degrees</span></code></span></dt><dd><p>The declination of the total magnetization of the anomaly source. If
 None, the <code class="docutils literal notranslate"><span class="pre">magnetization_declination</span></code> will be set equal to the
 <code class="docutils literal notranslate"><span class="pre">declination</span></code>, neglecting remanent magnetization and self
 demagnetization. Default None.</p>
@@ -575,7 +575,7 @@ demagnetization. Default None.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
-<dt><strong>da_filter</strong><span class="classifier"><a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v2024.7.1.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a></span></dt><dd><p>Array with the kernel for the reduction to the pole filter in frequency
+<dt><strong>da_filter</strong><span class="classifier"><a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v2024.9.1.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a></span></dt><dd><p>Array with the kernel for the reduction to the pole filter in frequency
 domain.</p>
 </dd>
 </dl>
@@ -661,7 +661,7 @@ domain.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 12, 2024.
+  Last updated on Oct 08, 2024.
   <br/>
 </p>
   </div>
